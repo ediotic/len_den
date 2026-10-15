@@ -1,0 +1,184 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:len_den/utils/app_strings.dart';
+
+import '../../controllers/sign_up_controller.dart';
+import '../../utils/app_colors.dart';
+import '../../utils/app_global.dart';
+import '../../utils/app_routes.dart';
+import '../../widgets/custom_btn.dart';
+import '../../widgets/custom_text_field.dart';
+
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final signupController = Get.find<SignUpController>();
+    return GestureDetector(
+      onTap: () => FocusScope.of(context).unfocus(),
+      child: Scaffold(
+        appBar: AppBar(
+          automaticallyImplyLeading: true,
+          title: Text(AppStrings.createAn),
+        ),
+        body: Center(
+          child: Container(
+            margin: EdgeInsets.all(25),
+            padding: EdgeInsets.all(22),
+            decoration: BoxDecoration(
+              color: AppColors.ff7f9,
+              borderRadius: BorderRadius.circular(30),
+            ),
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    AppStrings.startTracking,
+                    style: TextStyle(color: AppColors.f7181, fontSize: 13),
+                  ),
+
+                  const SizedBox(height: 25),
+                  // name
+                  Text(
+                    AppStrings.fullNmae,
+                    style: TextStyle(
+                      color: AppColors.darkGreen,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  const SizedBox(height: 5),
+
+                  /// name
+                  CustomTextField(
+                    hintText: AppStrings.yourFull,
+                    suffix: Icons.person_2_outlined,
+                    onSuffixTap: null,
+                  ),
+                  const SizedBox(height: 15),
+
+                  //email
+                  Text(
+                    AppStrings.email,
+                    style: TextStyle(
+                      color: AppColors.darkGreen,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  const SizedBox(height: 5),
+
+                  /// Email
+                  CustomTextField(
+                    hintText: AppStrings.example,
+                    suffix: Icons.email_outlined,
+                    onSuffixTap: null,
+                  ),
+                  const SizedBox(height: 15),
+                  Text(
+                    AppStrings.pass,
+                    style: TextStyle(
+                      color: AppColors.darkGreen,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  const SizedBox(height: 5),
+
+                  // Password
+                  Obx(
+                    () => CustomTextField(
+                      obscureText: signupController.isVisible.value,
+                      hintText: AppStrings.atLeast,
+                      suffix: signupController.isVisible.value
+                          ? Icons.visibility
+                          : Icons.visibility_off_outlined,
+                      onSuffixTap: signupController.toggleEye,
+                    ),
+                  ),
+                  const SizedBox(height: 15),
+
+                  // re password
+                  Text(
+                    AppStrings.reEnter,
+                    style: TextStyle(
+                      color: AppColors.darkGreen,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  const SizedBox(height: 5),
+
+                  // RE Password
+                  Obx(
+                    () => CustomTextField(
+                      obscureText: signupController.isVisible.value,
+                      hintText: AppStrings.reEnter,
+                      suffix: signupController.isVisible.value
+                          ? Icons.visibility
+                          : Icons.visibility_off_outlined,
+                      onSuffixTap: signupController.toggleEye,
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+
+                  Text(
+                    AppStrings.terms,
+                    style: TextStyle(color: AppColors.f7181, fontSize: 12),
+                  ),
+
+                  SizedBox(height: mq.height * 0.06),
+
+                  CustomButtom(
+                    fun: () {},
+                    btnName: AppStrings.createAccount,
+                    bgColor: AppColors.f0e,
+                    foreGroundColor: AppColors.white,
+                    size: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                    width: 342,
+                    height: 55,
+                    borderRadius: 15,
+                    iconSize: 15,
+                    spacing: 10,
+                    icon: CupertinoIcons.arrow_right,
+                  ),
+
+                  SizedBox(height: mq.height * 0.06),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        AppStrings.already,
+                        style: TextStyle(
+                          color: AppColors.darkGreen,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      TextButton(
+                        onPressed: () => Get.toNamed(AppRoutes.loginScreen),
+                        child: Text(
+                          AppStrings.logIn,
+                          style: TextStyle(
+                            color: AppColors.f0e,
+                            fontSize: 13,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

@@ -1,0 +1,39 @@
+class AppStrings {
+  static const String appName = "Len Den";
+  static const String logInToMange= "Log in to manage your money.";
+  static const String getStarted = "Get Started";
+  static const String everyRuppe = "Every rupee, accounted for.";
+  static const String trackWhat = "Track what you give, borrow and get back";
+  static const String continue1 = "Continue";
+  static const String pass = "PASSWORD";
+  static const String email = "EMAIL ADDRESS";
+  static const String enterEmail = "Enter email address";
+  static const String enterPass = "Enter password";
+  static const String simplePrivate = "Simple • Private • Secure";
+  static const String withOut = "Lend with trust. Track with ease.";
+  static const String lend = "Lend with trust. Track with ease.";
+  static const String welcomeBack = "Welcome back!";
+  static const String forgot = "Forgot password?";
+  static const String logIn = "Log In";
+  static const String orContinue = "or continue with";
+  static const String dont = "Don't have an account?";
+  static const String enterYourRegis = "Enter your registered email to receive a password reset link.";
+  static const String signUp = "sign up";
+  static const String resetPass = "Reset your password";
+  static const String continueWithGoogle = "Continue with Google";
+  static const String example = "yourname@example.com";
+  static const String sendRest = "Send Reset Link";
+  static const String createAn = "Create an account";
+  static const String fullNmae = "FULL NAME";
+  static const String yourFull = "Your full name";
+  static const String mbNum = "MOBILE NUMBER";
+  static const String confirmPass = "CONFIRM PASSWORD";
+  static const String reEnter = "Re-enter password";
+  static const String createAccount = "Create Account";
+  static const String already = "Already registered?";
+  static const String atLeast = "At least 8 characters";
+  static const String terms = "I agree to Terms of Service and Privacy Policy";
+  static const String startTracking = "Start tracking your money in minutes.";
+  static const String remember = "Remember who owes you, what you owe, and when it's time to settle up.";
+      
+}
