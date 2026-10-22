@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "394246384194",
+    "project_id": "lenden-af640",
+    "storage_bucket": "lenden-af640.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:394246384194:android:c39afe4c6e3166a7e59bdb",
+        "android_client_info": {
+          "package_name": "ediotic.com.len_den"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6mhzMbA5O3cKYOTXq-oJH4-Z1Y1bOgj8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
