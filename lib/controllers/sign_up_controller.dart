@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:len_den/controllers/auth_controller.dart';
+import 'package:len_den/utils/app_routes.dart';
 
 class SignUpController extends GetxController {
   // Auth controller
@@ -120,6 +121,9 @@ class SignUpController extends GetxController {
         authController.errorMsg.value,
         snackPosition: SnackPosition.BOTTOM,
       );
+      if(success){
+        Get.offAllNamed(AppRoutes.bottomTabsScreen);
+      }
     }
   }
 

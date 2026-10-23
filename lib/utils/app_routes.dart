@@ -22,6 +22,6 @@ class AppRoutes {
   GetPage(name: loginScreen, page: () => LoginScreen()),
   GetPage(name: signUpScreen, page: () => SignUpScreen()),
   GetPage(name: forgotScreen, page: () => ForgotScreen()),
-  GetPage(name: bottomTabsScreen, page: () => BottomTabs()),
+  GetPage(name: bottomTabsScreen, page: () => BottomTabs() , transition: Transition.cupertino),
  ];
 }
